@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@100&family=PT+Sans+Narrow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  font-size: 17px;
+  font-family: "Open Sans";
+  src: url("https://fonts.googleapis.com/css?family=Open Sans");
+}
+#main-body {
+  margin: auto;
+  max-width: 1000px;
+}
+.navbar li {
+  list-style: none;
+}
+.navbar a {
+  text-decoration: none;
+}
+.header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.hamburger {
+  display: none;
+  background: black;
+  padding: 10px;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 900;
+
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+}
+.nav-link:hover {
+  color: #fcef3e;
+}
+/* .nav-logo {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #181146;
+} */
+
+.nav-menu {
+  position: fixed;
+  right: -100%;
+  top: 110px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  text-align: center;
+  transition: 0.7s;
+  box-shadow: 0 10px 27px rgba(255, 255, 255, 0.05);
+  z-index: 10;
+  height: 100%;
+}
+.nav-menu.active {
+  right: 0;
+  top: 110px;
+}
+.nav-item {
+  margin: 1.2vh 0;
+  font-size: 3em;
+}
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+@media only screen and(max-width: 600px ) {
+  .nav-item {
+    margin: 1rem 0;
+  }
+}
+/* main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.main-page {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+.detailrow {
+  padding: 10px 0px;
+}
+.detailrow span {
+  display: inline-block;
+  min-width: 150px;
+}
+
+.impheading {
+  font-size: 25px;
+  font-family: "Courier New", Courier, monospace;
+}
+/* code start for slideshow */
+.mySlides {
+  display: none;
+}
+.mySlides .fade img {
+  vertical-align: middle;
+  height: 600px;
+  opacity: 0.2;
+}
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+/* code end for slideshow */
+
+/* footer css START*/
+
+.footer-content {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(41, 41, 41);
+}
+
+.footer-content h3 {
+  font-size: 3.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+  color: white;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  color: #cacdd2;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li > a {
+  color: white;
+}
+
+.socials li {
+  margin: 0 10px;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.footer-bottom {
+  background: #000;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-bottom p {
+  align-items: flex-start;
+}
+.footer-menu li {
+  list-style: none;
+  margin: 15px 10px 0px 10px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  color: white;
+}
+
+#footer-linkedin-div:hover #linkedIn-logo {
+  fill: rgb(68, 127, 255);
+}
+
+#footer-github-div:hover #github-logo {
+  fill: rgb(0, 0, 0);
+}
+
+/* footer css END */
+
+/* toolip css START */
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* tooltip css END */
+
+/* HOVER UNDERLINE CSS START */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffde22;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* HOVER UNDERLINE CSS END */
+
+#welcome {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+#img-overlay {
+  position: absolute; /* Sit on top of the page content */
+  /* display: none; Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: -5px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+#welcome-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Dancing Script", cursive;
+  font-size: 4vw;
+  z-index: 5;
+}
+.facility-icons {
+  padding: 20px;
+  width: 30px;
+  flex-grow: 1;
+  margin: 10px;
+}
+.facility-icons:hover {
+  background-color: bisque;
+}
+#facility-options {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+}
+.facility-icons-name {
+  text-align: center;
+}
+#facilities,
+#about-famt-hostel,
+#important-timing,
+#hostel-rules,
+#mess-details,
+#photogallery {
+  display: block;
+  max-width: 1000px;
+  margin: auto;
+  padding: 5px 10px;
+}
+#about-famt-hostel p {
+  text-align: justify;
+  padding: 10px 15px;
+}
+.main-headings {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  color: orangered;
+  font-size: 5em;
+  padding: 10px 0px;
+  margin: 10px 0px;
+}
+#contactinfo {
+  padding: 5px 10px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+#welcome,
+#about-famt-hostel,
+#facilities,
+#photogallery,
+#contactus,
+#hostel-rules,
+#important-timing {
+  margin-bottom: 75px;
+}
+#contactdetails h3 {
+  font-size: 25px;
+  font-family: "Courier New", Courier, monospace;
+}
+#loginAndMenu {
+  display: flex;
+}
+#loginAndMenu button {
+  background-color: rgb(50, 172, 13);
+  padding: 15px 15px;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0px 25px;
+  border: none;
+  border-radius: 15px 0px 15px 0px;
+  color: aliceblue;
+  transition: 0.5s;
+}
+#loginAndMenu button:hover {
+  background-color: rgb(38, 136, 9);
+  border-radius: 0px 15px 0px 15px;
+}
+#college-icon-mini {
+  display: none;
+}
+
+#hostel-rules ul {
+  list-style-type: none;
+}
+#hostel-rules ul li {
+  padding: 8px 0px;
+  font-size: large;
+}
+#hostel-rules ul li::before {
+  font-family: sans-serif;
+  content: "✔";
+  color: white;
+  display: inline-block;
+  width: 1em;
+  background: rgb(81, 199, 238);
+  padding-left: 3px;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 1em;
+  }
+  .facility-icons-name {
+    font-size: 1em;
+  }
+  #college-icon-mini {
+    display: block;
+  }
+  #college-full-icon {
+    display: none;
+  }
+  .main-headings {
+    font-size: 3em;
+  }
+  #welcome-centered {
+    font-size: 9vw;
+  }
+  #loginAndMenu button {
+    padding: 8px 7px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #loginAndMenu button {
+    padding: 8px 7px;
+    font-size: 13px;
+    margin: 0px 15px;
+  }
+}
